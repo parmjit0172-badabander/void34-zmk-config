@@ -1,0 +1,11 @@
+file_format: "1"
+id: void34
+name: TH3 V01D
+type: shield
+requires: [pro_micro]
+features:
+  - keys
+siblings:
+  - void34_core
+  - void34_left
+  - void34_right
