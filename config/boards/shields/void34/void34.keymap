@@ -10,49 +10,133 @@
 
 #include <dt-bindings/zmk/ext_power.h>
 
+#define _ &kp
+#define ___ &none
+#define ______ &trans
+
+#define DEF 0
+#define GAM 1
+#define GFN 2
+#define SYM 3
+#define ALT 4
+#define NAV 5
+#define MDA 6
+#define FUN 7
+
+#define NTAB LC(PGDN)
+#define PTAB LC(PGUP)
+
+#define NSPC LC(LG(RIGHT))
+#define PSPC LC(LG(LEFT))
+
+#define GRV RA(GRAVE)
+#define BSL RA(BSLH)
+
+&sk {
+        release-after-ms = <60000>;
+};
+
 / {
+        macros {
+                lc: mo_layer_switch_with_an_embeded_cancel_tap_for_clearing_any_queued_sticky_mods_on_press {
+                        label = "LAYER_CANCEL";
+                        compatible = "zmk,behavior-macro-one-param";
+                        wait-ms = <0>;
+                        tap-ms = <0>;
+                        #binding-cells = <1>;
+                        bindings =
+                                <&macro_tap>,
+                                <&kp K_CANCEL &macro_param_1to1>,
+                                <&macro_press>,
+                                <&mo MACRO_PLACEHOLDER>,
+                                <&macro_pause_for_release>,
+                                <&macro_param_1to1>,
+                                <&macro_release>,
+                                <&mo MACRO_PLACEHOLDER>;
+                };
+        };
+
+        conditional_layers {
+                compatible = "zmk,conditional-layers";
+
+                nav_plus_sym_equals_fun {
+                        if-layers  = <NAV SYM>;
+                        then-layer = <FUN>;
+                };
+        };
+
         keymap {
                 compatible = "zmk,keymap";
 
                 default_layer {
-// -----------------------------------------------------------------------------------------
-// |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |
-// |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |
-// |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |
-//                   | LWR | SPC |   | SFT | ALT  |
                         bindings = <
-   &kp Q     &kp W     &kp E     &kp R     &kp T        &kp Y     &kp U     &kp I     &kp O       &kp P   
-   &kp A     &kp S     &kp D     &kp F     &kp G        &kp H     &kp J     &kp K     &kp L       &kp SEMI
-   &kp Z     &kp X     &kp C     &kp V     &kp B        &kp N     &kp M     &kp COMMA &kp DOT     &kp FSLH
-                                 &mo 1     &kp SPACE    &kp LSHFT &kp RALT
+   _ Q        _ W        _ E        _ R       _ T             _ Y        _ U        _ I        _ O       _ P   
+   _ A        _ S        _ D        _ F       _ G             _ H        _ J        _ K        _ L       _ SEMI
+   _ Z        _ X        _ C        _ V       _ B             _ N        _ M        _ COMMA    _ DOT     _ FSLH
+                                    &lc NAV   _ SPACE         _ LSHFT    &lc SYM
                         >;
                 };
                 
-                lower_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+                gam_layer {
                         bindings = <
-   &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0
-   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans
-   &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans
-                                          &kp LGUI     &kp SPACE      &trans   &kp RALT
+   _ TAB      _ Q        _ W        _ E       _ R             ___        ___        _ UP       ___       _ TAB
+   _ LSHFT    _ A        _ S        _ D       _ F             ___        _ LEFT     _ DOWN     _ RIGHT   _ RSHFT
+   _ LCTRL    _ Z        _ X        _ C       _ V             ___        ___        ___        ___       _ RCTRL
+                                    _ RCTRL   _ SPACE         ______     ______
                         >;
                 };
 
-                raise_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+                gfn_layer {
                         bindings = <
-   &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT        &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR
-   &trans   &trans &trans   &trans   &trans           &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH
-   &trans   &trans &trans   &trans   &trans           &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE
-                            &trans   &kp SPACE        &trans    &kp RALT
+   _ TAB      _ Q        _ W        _ E       _ R             ___        ___        _ UP       ___       _ TAB
+   _ LSHFT    _ A        _ S        _ D       _ F             ___        _ LEFT     _ DOWN     _ RIGHT   _ RSHFT
+   _ LCTRL    _ Z        _ X        _ C       _ V             ___        ___        ___        ___       _ RCTRL
+                                    _ RCTRL   _ SPACE         ______     ______
+                        >;
+                };
+                
+                sym_layer {
+                        bindings = <
+   _ N1       _ N2       _ N3       _ N4       _ N5           _ N6       _ N7       _ N8       _ N9      _ N0
+   _ SEMI     _ GRV      _ GRAVE    _ TILDE    _ MINUS        _ PLUS     &sk LSHFT  &sk LCTRL  &sk LALT  &sk LGUI
+   _ BSL      ______     _ LBRC     _ LBKT     _ UNDER        _ EQUAL    _ RBKT     _ RBRC     _ PIPE    _ BSLH
+                                    ______     ______         &mo ALT    ______
+                        >;
+                };
+
+                alt_layer {
+                        bindings = <
+   _ RA(Q)    _ RA(W)    _ RA(E)    _ RA(R)    _ RA(T)         _ RA(Y)   _ RA(U)    _ RA(I)        _ RA(O)       _ RA(P)   
+   _ RA(A)    _ RA(S)    _ RA(D)    _ RA(F)    _ RA(G)         _ RA(H)   _ RA(J)    _ RA(K)        _ RA(L)       _ RA(SEMI)
+   _ RA(Z)    _ RA(X)    _ RA(C)    _ RA(V)    _ RA(B)         _ RA(N)   _ RA(M)    _ RA(COMMA)    _ RA(DOT)     _ RA(FSLH)
+                                    ______     ______         ______     ______
+                        >;
+                };
+                
+                nav_layer {
+                        bindings = <
+   ______     ______     ______     ______    _ ESC           _ ESC      _ HOME     _ END      _ BSPC    _ DEL
+   &sk LGUI   &sk LALT   &sk LCTRL  &sk LSHFT _ RET           _ RET      _ LEFT     _ DOWN     _ UP      _ RIGHT
+   _ PSPC     _ NSPC     &tog GAM   _ PSCRN   _ TAB           _ TAB      _ PG_UP    _ PG_DN    _ SQT     _ KP_NUM
+                                    ______    _ CAPS          ______     ______
+                        >;
+                };
+
+                mda_layer {
+                        bindings = <
+   ______     ______     ______     ______    ______          ______     ______     ______     ______    ______
+   ______     ______     ______     ______    ______          ______     ______     ______     ______    ______
+   ______     ______     ______     ______    ______          ______     ______     ______     ______    ______
+                                    ______    ______          ______     ______
+                        >;
+                };
+
+                num_layer {
+                        bindings = <
+   _ KP_N1    _ KP_N2    _ KP_N3    _ KP_N4    _ KP_N5        _ KP_N6    _ KP_N7    _ KP_N8    _ KP_N9   _ KP_N0
+   &sk LGUI   &sk LALT   &sk LCTRL  &sk LSHFT  _ F11          _ F12      &sk LSHFT  &sk LCTRL  &sk LALT  &sk LGUI
+   _ F1       _ F2       _ F3       _ F4       _ F5           _ F6       _ F7       _ F8       _ F9      _ F10
+                                    ______     ______         ______     ______
                         >;
                 };
         };
