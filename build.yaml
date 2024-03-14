@@ -6,7 +6,8 @@
 #
 ---
 include:
-  - board: seeeduino_xiao_ble
+  # - board: seeeduino_xiao_ble
+  - board: nice_nano_v2
     shield: void34_core
   - board: nice_nano_v2
     shield: void34_left
