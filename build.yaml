@@ -6,10 +6,9 @@
 #
 ---
 include:
-  # - board: seeeduino_xiao_ble
   - board: nice_nano_v2
-    shield: void34_core
+    shield: enki42_left
   - board: nice_nano_v2
-    shield: void34_left
+    shield: enki42_right
   - board: nice_nano_v2
-    shield: void34_right
+    shield: enki42_dongle
