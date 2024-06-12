@@ -204,6 +204,128 @@
                         bindings = <_ PLUS>;
                         layers = <0>;
                 };
+
+                combo_c4r1r2 {
+                        key-positions = <6 16>;
+                        bindings = <_ N7>;
+                        layers = <0>;
+                };
+                combo_c5r1r2 {
+                        key-positions = <7 17>;
+                        bindings = <_ N8>;
+                        layers = <0>;
+                };
+                combo_c6r1r2 {
+                        key-positions = <8 18>;
+                        bindings = <_ N9>;
+                        layers = <0>;
+                };
+                combo_c7r1r2 {
+                        key-positions = <9 19>;
+                        bindings = <_ N0>;
+                        layers = <0>;
+                };
+
+                combo_c4r2r3 {
+                        key-positions = <16 26>;
+                        bindings = <_ N6>;
+                        layers = <0>;
+                };
+                combo_c5r2r3 {
+                        key-positions = <17 27>;
+                        bindings = <_ BSLH>;
+                        layers = <0>;
+                };
+                combo_c6r2r3 {
+                        key-positions = <18 28>;
+                        bindings = <_ PIPE>;
+                        layers = <0>;
+                };
+                combo_c7r2r3 {
+                        key-positions = <19 29>;
+                        bindings = <_ BSL>;
+                        layers = <0>;
+                };
+
+                combo_fn_r0c0c1 {
+                        key-positions = <0 1>;
+                        bindings = <_ F7>;
+                        layers = <2>;
+                };
+                combo_fn_r0c1c2 {
+                        key-positions = <1 2>;
+                        bindings = <_ F8>;
+                        layers = <2>;
+                };
+                combo_fn_r0c2c3 {
+                        key-positions = <2 3>;
+                        bindings = <_ F9>;
+                        layers = <2>;
+                };
+
+                combo_fn_r1c0c1 {
+                        key-positions = <10 11>;
+                        bindings = <_ F4>;
+                        layers = <2>;
+                };
+                combo_fn_r1c1c2 {
+                        key-positions = <11 12>;
+                        bindings = <_ F5>;
+                        layers = <2>;
+                };
+                combo_fn_r1c2c3 {
+                        key-positions = <12 13>;
+                        bindings = <_ F6>;
+                        layers = <2>;
+                };
+
+                combo_fn_r2c0c1 {
+                        key-positions = <20 21>;
+                        bindings = <_ F1>;
+                        layers = <2>;
+                };
+                combo_fn_r2c1c2 {
+                        key-positions = <21 22>;
+                        bindings = <_ F2>;
+                        layers = <2>;
+                };
+                combo_fn_r2c2c3 {
+                        key-positions = <22 23>;
+                        bindings = <_ F3>;
+                        layers = <2>;
+                };
+
+                combo_fn_r0c4c5 {
+                        key-positions = <6 7>;
+                        bindings = <_ F10>;
+                        layers = <2>;
+                };
+                combo_fn_r0c5c6 {
+                        key-positions = <7 8>;
+                        bindings = <_ F11>;
+                        layers = <2>;
+                };
+                combo_fn_r0c6c7 {
+                        key-positions = <8 9>;
+                        bindings = <_ F12>;
+                        layers = <2>;
+                };
+
+                combo_fn_r2c4c5 {
+                        key-positions = <20 21>;
+                        bindings = <_ F13>;
+                        layers = <2>;
+                };
+                combo_fn_r2c5c6 {
+                        key-positions = <21 22>;
+                        bindings = <_ F14>;
+                        layers = <2>;
+                };
+                combo_fn_r2c6c7 {
+                        key-positions = <22 23>;
+                        bindings = <_ F15>;
+                        layers = <2>;
+                };
         };
          
         keymap {
