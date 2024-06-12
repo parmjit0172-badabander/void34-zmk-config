@@ -77,6 +77,49 @@
                         then-layer = <FUN>;
                 };
         };
+
+        combos {
+                compatible = "zmk,combos";
+
+                combo_r0c0c1 {
+                        key-positions = <0 1>;
+                        bindings = <_ RA(O)>;
+                };
+                combo_r0c1c2 {
+                        key-positions = <1 2>;
+                        bindings = <_ LBRC>;
+                };
+                combo_r0c2c3 {
+                        key-positions = <2 3>;
+                        bindings = <_ T>;
+                };
+
+                combo_r1c0c1 {
+                        key-positions = <10 11>;
+                        bindings = <_ RA(L)>;
+                };
+                combo_r1c1c2 {
+                        key-positions = <11 12>;
+                        bindings = <_ LBKT>;
+                };
+                combo_r1c2c3 {
+                        key-positions = <12 13>;
+                        bindings = <_ G>;
+                };
+
+                combo_r2c0c1 {
+                        key-positions = <20 21>;
+                        bindings = <_ MINUS>;
+                };
+                combo_r2c1c2 {
+                        key-positions = <21 22>;
+                        bindings = <_ UNDER>;
+                };
+                combo_r2c2c3 {
+                        key-positions = <22 23>;
+                        bindings = <_ B>;
+                };
+        };
          
         keymap {
                 compatible = "zmk,keymap";
