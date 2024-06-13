@@ -13,8 +13,8 @@
 #define NUM 2
 #define FUN 3
 
-#define NTAB LC(PGDN)
-#define PTAB LC(PGUP)
+#define NTAB LC(TAB)
+#define PTAB LC(LS(TAB))
 
 #define NSPC LC(LG(RIGHT))
 #define PSPC LC(LG(LEFT))
@@ -80,40 +80,49 @@
                 combo_r0c0c1 {
                         key-positions = <0 1>;
                         bindings = <_ RA(O)>;
+                        layers = <0>;
                 };
                 combo_r0c1c2 {
                         key-positions = <1 2>;
                         bindings = <_ LBRC>;
+                        layers = <0>;
                 };
                 combo_r0c2c3 {
                         key-positions = <2 3>;
                         bindings = <_ T>;
+                        layers = <0>;
                 };
 
                 combo_r1c0c1 {
                         key-positions = <10 11>;
                         bindings = <_ RA(L)>;
+                        layers = <0>;
                 };
                 combo_r1c1c2 {
                         key-positions = <11 12>;
                         bindings = <_ LBKT>;
+                        layers = <0>;
                 };
                 combo_r1c2c3 {
                         key-positions = <12 13>;
                         bindings = <_ G>;
+                        layers = <0>;
                 };
 
                 combo_r2c0c1 {
                         key-positions = <20 21>;
-                        bindings = <_ MINUS>;
+                        bindings = <_ UNDER>;
+                        layers = <0>;
                 };
                 combo_r2c1c2 {
                         key-positions = <21 22>;
-                        bindings = <_ UNDER>;
+                        bindings = <_ MINUS>;
+                        layers = <0>;
                 };
                 combo_r2c2c3 {
                         key-positions = <22 23>;
                         bindings = <_ B>;
+                        layers = <0>;
                 };
 
                 combo_c0r1r2 {
@@ -134,6 +143,7 @@
                 combo_c3r1r2 {
                         key-positions = <3 13>;
                         bindings = <_ N4>;
+                        layers = <0>;
                 };
 
                 combo_c0r2r3 {
@@ -174,33 +184,33 @@
                 };
 
                 combo_r1c4c5 {
-                        key-positions = <10 11>;
+                        key-positions = <16 17>;
                         bindings = <_ H>;
                         layers = <0>;
                 };
                 combo_r1c5c6 {
-                        key-positions = <11 12>;
+                        key-positions = <17 18>;
                         bindings = <_ RBKT>;
                         layers = <0>;
                 };
                 combo_r1c6c7 {
-                        key-positions = <12 13>;
+                        key-positions = <18 19>;
                         bindings = <_ RA(SEMI)>;
                         layers = <0>;
                 };
 
                 combo_r2c4c5 {
-                        key-positions = <20 21>;
+                        key-positions = <26 27>;
                         bindings = <_ N>;
                         layers = <0>;
                 };
                 combo_r2c5c6 {
-                        key-positions = <21 22>;
+                        key-positions = <27 28>;
                         bindings = <_ EQUAL>;
                         layers = <0>;
                 };
                 combo_r2c6c7 {
-                        key-positions = <22 23>;
+                        key-positions = <28 29>;
                         bindings = <_ PLUS>;
                         layers = <0>;
                 };
@@ -342,18 +352,18 @@
 
                 nav_layer {
                         bindings = <
-   &tabber    &swapper   ______     ______    _ ESC           _ ESC      _ HOME     _ END      _ BSPC    _ DEL
-   &sk LGUI   &sk LALT   &sk LCTRL  &sk LSHFT _ RET           _ RET      _ LEFT     _ DOWN     _ UP      _ RIGHT
-   _ PSPC     _ NSPC     ___        _ PSCRN   _ TAB           _ TAB      _ PG_UP    _ PG_DN    _ SQT     _ KP_NUM
-                                    ______    _ CAPS          _ CAPS     ______
+   &tabber    &swapper   _ PTAB     _ NTAB    ___             ___        _ HOME     _ END      _ BSPC    _ DEL
+   &sk LGUI   &sk LALT   &sk LCTRL  &sk LSHFT ___             ___        _ LEFT     _ DOWN     _ UP      _ RIGHT
+   _ PSPC     _ NSPC     _ PSCRN    _ CAPS    ___             ___        _ RET      _ TAB      _ ESC     _ KP_NUM
+                                    ______    ______          ______     ______
                         >;
                 };
 
                 num_layer {
                         bindings = <
-   _ KP_N1    _ KP_N2    _ KP_N3    _ KP_N4    _ KP_N5        _ KP_N6    _ KP_N7    _ KP_N8    _ KP_N9   _ KP_N0
-   &sk LGUI   &sk LALT   &sk LCTRL  &sk LSHFT  _ F11          _ F12      &sk LSHFT  &sk LCTRL  &sk LALT  &sk LGUI
-   _ F1       _ F2       _ F3       _ F4       _ F5           _ F6       _ F7       _ F8       _ F9      _ F10
+   _ LBKT     _ KP_N7    _ KP_N8    _ KP_N9    ___            ___       _ KP_PLUS  _ KP_MINUS _ KP_MULTIPLY _ KP_DIVIDE
+   _ KP_N0    _ KP_N4    _ KP_N5    _ KP_N6    ___            ___       &sk LSHFT  &sk LCTRL  &sk LALT  &sk LGUI
+   _ RBKT     _ KP_N1    _ KP_N2    _ KP_N3    ___            ___       _ RET      _ TAB      _ ESC     _ KP_NUM
                                     ______     ______         ______     ______
                         >;
                 };
