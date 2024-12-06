@@ -212,7 +212,7 @@
             bindings = <_ LS(BSLH)>;
             layers = <0>;
         };
-        combo_c8r0r1 {
+        combo_c8r1r2 {
             key-positions = <18 28>;
             bindings = <_ RA(BSLH)>;
             layers = <0>;
