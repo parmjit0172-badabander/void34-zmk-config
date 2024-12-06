@@ -125,7 +125,7 @@
             bindings = <_ GRAVE>;
             layers = <0>;
         };
-        combo_c3r0r1 {
+        combo_c3r1r2 {
             key-positions = <13 23>;
             bindings = <_ LS(GRAVE)>;
             layers = <0>;
