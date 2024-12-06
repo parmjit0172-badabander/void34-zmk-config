@@ -96,7 +96,7 @@
 
         combo_c1r0r1 {
             key-positions = <1 11>;
-            bindings = <_ RA(N)>;
+            bindings = <_ RA(M)>;
             layers = <0>;
         };
         combo_c2r0r1 {
