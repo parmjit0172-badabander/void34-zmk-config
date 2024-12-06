@@ -10,6 +10,10 @@
 
 #include <dt-bindings/zmk/ext_power.h>
 
+#define _ &kp
+#define ___ &none
+#define ______ &trans
+
 #define DEF 0
 #define NAV 1
 #define NUM 2
