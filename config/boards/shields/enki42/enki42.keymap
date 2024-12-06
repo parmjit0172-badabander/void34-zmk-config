@@ -160,7 +160,7 @@
             layers = <0>;
         };
         combo_r1c8c9 {
-            key-positions = <27 28>;
+            key-positions = <18 19>;
             bindings = <_ N7>;
             layers = <0>;
         };
@@ -176,7 +176,7 @@
             layers = <0>;
         };
         combo_r2c8c9 {
-            key-positions = <29 30>;
+            key-positions = <28 29>;
             bindings = <_ N5>;
             layers = <0>;
         };
