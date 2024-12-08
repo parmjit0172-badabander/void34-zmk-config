@@ -1,10 +1,7 @@
-# Copyright (c) 2020 The ZMK Contributors
-# SPDX-License-Identifier: MIT
-
-if SHIELD_ENKI42_LEFT
+if SHIELD_WELLUM36_LEFT
 
 config ZMK_KEYBOARD_NAME
-	default "enki42 Dongle"
+	default "Wellum36"
 
 config ZMK_SPLIT_BLE_ROLE_CENTRAL
 	default y
@@ -14,7 +11,7 @@ config ZMK_USB
 
 endif
 
-if SHIELD_ENKI42_LEFT || SHIELD_ENKI42_RIGHT
+if SHIELD_WELLUM36_LEFT || SHIELD_WELLUM36_RIGHT
 
 config ZMK_SPLIT
 	default y
