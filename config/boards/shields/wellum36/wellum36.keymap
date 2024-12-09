@@ -19,6 +19,7 @@
 #define SQT GRAVE
 #define DQT LS(GRAVE)
 #define GRV RA(GRAVE)
+#define PIP LS(BSLH)
 
 #define NSPC LC(LG(RIGHT))
 #define PSPC LC(LG(LEFT))
@@ -213,9 +214,9 @@
 
         sym_layer {
             bindings = <
-    _ N1       _ N2       _ N3       _ N4      _ N5            _ N6       _ N7       _ N8       _ N9      _ N0
-    _ SEMI     _ GRV      _ SQT      _ DQT     _ MINUS         _ PLUS     &sk LSHFT  &sk LCTRL  &sk LALT  &sk LGUI
-    _ BSL      ___        _ LS(LBKT) _ LBKT    _ UNDER         _ EQUAL    _ RBKT     _ LS(RBKT) _ PIP     _ BSLH
+    _ N1       _ N2       _ N3       _ N4      _ N5            _ N6       _ N7       _ N8       _ N9       _ N0
+    _ SEMI     _ GRV      _ SQT      _ DQT     _ MINUS         _ PLUS     &sk LSHFT  &sk LCTRL  &sk LALT   &sk LGUI
+    _ BSL      ___        _ LS(LBKT) _ LBKT    _ UNDER         _ EQUAL    _ RBKT     _ LS(RBKT) _ PIP      _ BSLH
                           ______     ______    ______          ______     ______     ______
             >;
         };
