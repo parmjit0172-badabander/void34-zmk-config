@@ -207,7 +207,7 @@
         nav_layer {
             bindings = <
     &tabber    &swapper   _ PG_UP    _ PG_DN   _ ESC           _ ESC      _ HOME     _ END      _ BSPC    _ DEL
-    &sk LGUI   &sk LALT   &sk LCTRL  &sk LSHFT _ RET           _ RET      _ LEFT     _ DOWN     _ UP      _ RIGHT
+    &cm_gui    &cm_alt    &cm_ctrl   &cm_shift _ RET           _ RET      _ LEFT     _ DOWN     _ UP      _ RIGHT
     _ PSPC     _ NSPC     &tog GAM   _ PSCRN   _ TAB           _ TAB      _ PG_UP    _ PG_DN    _ APOS    _ KP_NUM
                                      ______    ______          ______     ______
             >;
@@ -216,7 +216,7 @@
         sym_layer {
             bindings = <
     _ N1       _ N2       _ N3       _ N4      _ N5            _ N6       _ N7       _ N8       _ N9       _ N0
-    _ SEMI     _ GRV      _ SQT      _ DQT     _ MINUS         _ PLUS     &sk LSHFT  &sk LCTRL  &sk LALT   &sk LGUI
+    _ SEMI     _ GRV      _ SQT      _ DQT     _ MINUS         _ PLUS     &cm_shift  &cm_ctrl   &cm_alt    &cm_gui
     _ BSL      ___        _ LS(LBKT) _ LBKT    _ UNDER         _ EQUAL    _ RBKT     _ LS(RBKT) _ PIP      _ BSLH
                                      ______    ______          ______     ______
             >;
@@ -234,7 +234,7 @@
         num_layer {
             bindings = <
     _ KP_N1    _ KP_N2    _ KP_N3    _ KP_N4   _ KP_N5         _ KP_N6    _ KP_N7    _ KP_N8    _ KP_N9   _ KP_N0
-    &sk LGUI   &sk LALT   &sk LCTRL  &sk LSHFT _ F11           _ F12      &sk LSHFT  &sk LCTRL  &sk LALT  &sk LGUI
+    &cm_gui    &cm_alt    &cm_ctrl   &cm_shift _ F11           _ F12      &cm_shift  &cm_ctrl   &cm_alt    &cm_gui
     _ F1       _ F2       _ F3       _ F4      _ F5            _ F6       _ F7       _ F8       _ F9      _ F10
                                      ______    ______          ______     ______
             >;
