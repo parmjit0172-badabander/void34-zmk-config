@@ -16,7 +16,7 @@
 #define SYM 5
 #define ALT 6
 #define NUM 7
-#define SYS 9
+#define CMD 8
 
 #define MEH(key) LS(LC(LA(key)))
 
@@ -231,7 +231,7 @@
     &tabber    &swapper_win ___        _ CAPS   _ ESC          _ ESC      _ HOME     _ END      _ BSPC    _ DEL
     &cm_gui    &cm_alt      &cm_ctrl   &cm_sft  _ RET          _ RET      _ LEFT     _ DOWN     _ UP      _ RIGHT
     _ PSPC     _ NSPC       &tog GAM   _ PSCRN  _ TAB          _ TAB      _ PG_UP    _ PG_DN    _ APOS    _ KP_NUM
-                                       &mo SYS  ______         ______     ______
+                                       &mo CMD  ______         ______     ______
             >;
         };
 
