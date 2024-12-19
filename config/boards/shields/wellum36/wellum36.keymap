@@ -228,7 +228,7 @@
     _ N1       _ N2       _ N3       _ N4      _ N5            _ N6       _ N7       _ N8       _ N9       _ N0
     _ SEMI     _ GRV      _ SQT      _ DQT     _ MINUS         _ PLUS     &cm_shift  &cm_ctrl   &cm_alt    &cm_gui
     _ BSL      ___        _ LS(LBKT) _ LBKT    _ UNDER         _ EQUAL    _ RBKT     _ LS(RBKT) _ PIP      _ BSLH
-                                     _ NBSP    ______          ______     &mo SYS
+                                     _ NBSP    ______          ______     &mo ALT
             >;
         };
 
