@@ -22,6 +22,7 @@
 #define GRV RA(GRAVE)
 #define PIP LS(BSLH)
 #define BSL RA(BSLH)
+#define NBSP RA(SPACE)
 
 #define NSPC LC(LG(RIGHT))
 #define PSPC LC(LG(LEFT))
@@ -142,7 +143,15 @@
         )
 
         MODMORPH(
-            swapper,
+            swapper_win,
+            &m_hold_mod_press_key LALT TAB,
+            &kp TAB,
+            MOD_LALT,
+            MOD_LALT
+        )
+
+        MODMORPH(
+            swapper_mac,
             &m_hold_mod_press_key LGUI TAB,
             &kp TAB,
             MOD_LGUI,
@@ -207,10 +216,10 @@
 
         nav_layer {
             bindings = <
-    &tabber    &swapper   _ PG_UP    _ PG_DN   _ ESC           _ ESC      _ HOME     _ END      _ BSPC    _ DEL
-    &cm_gui    &cm_alt    &cm_ctrl   &cm_shift _ RET           _ RET      _ LEFT     _ DOWN     _ UP      _ RIGHT
-    _ PSPC     _ NSPC     &tog GAM   _ PSCRN   _ TAB           _ TAB      _ PG_UP    _ PG_DN    _ APOS    _ KP_NUM
-                                     ______    ______          ______     ______
+    &tabber    &swapper_win _ PG_UP    _ PG_DN   _ ESC           _ ESC      _ HOME     _ END      _ BSPC    _ DEL
+    &cm_gui    &cm_alt      &cm_ctrl   &cm_shift _ RET           _ RET      _ LEFT     _ DOWN     _ UP      _ RIGHT
+    _ PSPC     _ NSPC       &tog GAM   _ PSCRN   _ TAB           _ TAB      _ PG_UP    _ PG_DN    _ APOS    _ KP_NUM
+                                       &mo SYS   ______          ______     _ CAPS
             >;
         };
 
@@ -219,7 +228,7 @@
     _ N1       _ N2       _ N3       _ N4      _ N5            _ N6       _ N7       _ N8       _ N9       _ N0
     _ SEMI     _ GRV      _ SQT      _ DQT     _ MINUS         _ PLUS     &cm_shift  &cm_ctrl   &cm_alt    &cm_gui
     _ BSL      ___        _ LS(LBKT) _ LBKT    _ UNDER         _ EQUAL    _ RBKT     _ LS(RBKT) _ PIP      _ BSLH
-                                     ______    ______          ______     &mo SYS
+                                     _ NBSP    ______          ______     &mo SYS
             >;
         };
 
