@@ -201,9 +201,9 @@
 
         gam_layer {
             bindings = <
-    _ TAB      _ Q        _ X        _ E       _ R             ___        ___        ___        ___       _ TAB
-    _ LSFT     _ A        _ W        _ D       _ F             ___        _ LEFT     _ UP       _ RIGHT   _ RSFT
-    _ LCTRL    _ Z        _ S        _ C       _ V             ___        ___        _ DOWN     ___       _ RCTRL
+    _ TAB      _ Q        _ W        _ E       _ R             ___        ___        _ UP       ___       _ TAB
+    _ LSFT     _ A        _ S        _ D       _ F             ___        _ LEFT     _ DOWN     _ RIGHT   _ RSFT
+    _ LCTRL    _ Z        _ X        _ C       _ V             ___        ___        ___        ___       _ RCTRL
                           _ LALT     _ SPACE   &mo GFN         &tog GAM   _ SPACE    ___
             >;
         };
@@ -228,10 +228,10 @@
 
         nav_layer {
             bindings = <
-    &tabber    &swapper_win ___        _ CAPS   _ ESC          _ ESC      _ HOME     _ END      _ BSPC    _ DEL
-    &cm_gui    &cm_alt      &cm_ctrl   &cm_sft  _ RET          _ RET      _ LEFT     _ DOWN     _ UP      _ RIGHT
-    _ PSPC     _ NSPC       &tog GAM   _ PSCRN  _ TAB          _ TAB      _ PG_UP    _ PG_DN    _ APOS    _ KP_NUM
-                            ___        &mo CMD  ______         ______     ______     ___
+    &tabber    &swapper_win &swapper_mac ___      _ ESC          _ ESC      _ HOME     _ END      _ BSPC    _ DEL
+    &cm_gui    &cm_alt      &cm_ctrl     &cm_sft  _ RET          _ RET      _ LEFT     _ DOWN     _ UP      _ RIGHT
+    _ PSPC     _ NSPC       &tog GAM     _ PSCRN  _ TAB          _ TAB      _ PG_UP    _ PG_DN    _ APOS    _ KP_NUM
+                            ___          &mo CMD  ______         ______     ______     ___
             >;
         };
 
