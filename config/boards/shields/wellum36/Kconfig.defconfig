@@ -1,7 +1,7 @@
 if SHIELD_WELLUM36_RIGHT
 
 config ZMK_KEYBOARD_NAME
-	default "Wellum36"
+	default "Lapka"
 
 config ZMK_SPLIT_BLE_ROLE_CENTRAL
 	default y

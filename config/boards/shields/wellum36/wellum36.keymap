@@ -195,7 +195,7 @@
     _ Q        _ W        _ E        _ R       _ T             _ Y        _ U        _ I        _ O       _ P
     _ A        _ S        _ D        _ F       _ G             _ H        _ J        _ K        _ L       _ SEMI
     _ Z        _ X        _ C        _ V       _ B             _ N        _ M        _ COMMA    _ DOT     _ FSLH
-                          _ F1       _ F2      _ F3            _ F4       _ F5       _ F6
+                          _ CAPS     _ SPACE   &la NAV         &la SYM    _ LSFT     &mo ALT
             >;
         };
 
@@ -210,10 +210,10 @@
 
         gfn_layer {
             bindings = <
-    _ N5       _ N1       _ N2       _ N3      _ N4            ___        ___        ___        ___       ___
+    _ N5       _ N1       _ N2       _ N3      _ N4            _ KP_NUM   &bt SEL 0  &bt SEL 1  &bt SEL 2 &bt BT_CLR_ALL
     _ N0       _ N6       _ N7       _ N8      _ N9            ___        ___        ___        ___       ___
-    _ G        _ J        _ I        _ M       _ T             ___        ___        ___        ___       ___
-                          ___        ______    ______          ______     ______     ___
+    _ G        _ J        _ I        _ M       _ T             ___        ___        ___        &sys_reset &bootloader
+                          _ ESC      _ RET     ______          ______     ______     ___
             >;
         };
 
