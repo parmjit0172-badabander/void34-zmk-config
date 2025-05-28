@@ -13,9 +13,8 @@
 #define GFN 2
 #define NAV 3
 #define SYM 4
-#define ALT 5
-#define NUM 6
-#define CMD 7
+#define NUM 5
+#define CMD 6
 
 #define MEH(key) LS(LC(LA(key)))
 
@@ -194,7 +193,7 @@
 _ Q          _ W          _ E          _ R         _ T             _ Y          _ U          _ I          _ O          _ P
 _ A          _ S          _ D          _ F         _ G             _ H          _ J          _ K          _ L          _ SEMI
 _ Z          _ X          _ C          _ V         _ B             _ N          _ M          _ COMMA      _ DOT        _ FSLH
-                          _ CAPS       _ SPACE     &la NAV         &la SYM      _ LSFT       &mo ALT
+                          _ CAPS       _ SPACE     &la NAV         &la SYM      _ LSFT       _ RALT
             >;
         };
 
@@ -231,15 +230,6 @@ _ N1         _ N2         _ N3         _ N4        _ N5            _ N6         
 _ SEMI       _ GRV        _ SQT        _ DQT       _ MINUS         _ PLUS       &cm_sft      &cm_ctrl     &cm_alt      &cm_gui
 _ BSL        ___          _ LS(LBKT)   _ LBKT      _ UNDER         _ EQUAL      _ RBKT       _ LS(RBKT)   _ PIP        _ BSLH
                           ______       ______      ______          ______       ______       _ RALT
-            >;
-        };
-
-        alt_layer {
-            bindings = <
-_ RA(Q)      _ RA(W)      _ RA(E)      _ RA(R)     _ RA(T)         _ RA(Y)      _ RA(U)      _ RA(I)      _ RA(O)      _ RA(P)
-_ RA(A)      _ RA(S)      _ RA(D)      _ RA(F)     _ RA(G)         _ RA(H)      _ RA(J)      _ RA(K)      _ RA(L)      _ RA(SEMI)
-_ RA(Z)      _ RA(X)      _ RA(C)      _ RA(V)     _ RA(B)         _ RA(N)      _ RA(M)      _ RA(COMMA)  _ RA(DOT)    _ RA(FSLH)
-                          ______       _ NBSP      ______          ______       ______       ______
             >;
         };
 
