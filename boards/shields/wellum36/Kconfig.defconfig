@@ -3,10 +3,13 @@ if SHIELD_WELLUM36_DONGLE
 config ZMK_KEYBOARD_NAME
 	default "Lapka"
 
-config ZMK_SPLIT_BLE_ROLE_CENTRAL
+config ZMK_USB
 	default y
 
-config ZMK_USB
+config ZMK_STUDIO
+  default y
+
+config ZMK_SPLIT_BLE_ROLE_CENTRAL
 	default y
 
 config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
