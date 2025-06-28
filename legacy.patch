@@ -1,0 +1,46 @@
+diff --git a/boards/shields/wellum36/wellum36_left.overlay b/boards/shields/wellum36/wellum36_left.overlay
+index 448df92..e2ee52a 100644
+--- a/boards/shields/wellum36/wellum36_left.overlay
++++ b/boards/shields/wellum36/wellum36_left.overlay
+@@ -4,14 +4,14 @@
+ 	input-gpios
+ 		= <&pro_micro 1  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // Q
+ 		, <&pro_micro 16 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // W
+-		, <&pro_micro 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // E
+-		, <&pro_micro 18 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // R
++		, <&pro_micro 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // E
++		, <&pro_micro 19 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // R
+ 		, <&pro_micro 21 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // T
+ 
+ 		, <&pro_micro 2  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // A
+ 		, <&pro_micro 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // S
+-		, <&pro_micro 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // D
+-		, <&pro_micro 19 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // F
++		, <&pro_micro 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // D
++		, <&pro_micro 18 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // F
+ 		, <&pro_micro 20 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // G
+ 
+ 		, <&pro_micro 0  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // Z
+diff --git a/boards/shields/wellum36/wellum36_right.overlay b/boards/shields/wellum36/wellum36_right.overlay
+index 2b74e1d..462f6a4 100644
+--- a/boards/shields/wellum36/wellum36_right.overlay
++++ b/boards/shields/wellum36/wellum36_right.overlay
+@@ -7,14 +7,14 @@
+ &kscan0 {
+ 	input-gpios
+ 		= <&pro_micro  2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // P
+-		, <&pro_micro  5 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // O
+-		, <&pro_micro  7 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // I
++		, <&pro_micro  4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // L
++		, <&pro_micro  6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // K
+ 		, <&pro_micro  8 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // U
+ 		, <&pro_micro  1 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // Y
+ 
+ 		, <&pro_micro  3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // ~
+-		, <&pro_micro  4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // L
+-		, <&pro_micro  6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // K
++		, <&pro_micro  5 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // O
++		, <&pro_micro  7 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // I
+ 		, <&pro_micro  9 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // J
+ 		, <&pro_micro 21 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> // H
+ 
