@@ -51,5 +51,5 @@
       , <&key_physical_attrs 100 100  700 300   0   0   0> // SHIFT
       , <&key_physical_attrs 100 100  800 300   0   0   0> // ALT
       ;
-  }
+  };
 };
