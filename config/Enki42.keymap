@@ -80,40 +80,40 @@
         Base {
             label = "Base";
             bindings = <
-&kp Q         &kp W        &kp E        &kp R         &kp T  &kp Y  &kp U         &kp I            &kp O             &kp P
-&hml LSHFT A  &hml LALT S  &hml LGUI D  &hml LCTRL F  &kp G  &kp H  &hmr LCTRL J  &hmr RGUI K      &hmr RIGHT_ALT L  &hmr RSHFT SQT
-&kp Z         &kp X        &kp C        &kp V         &kp B  &kp N  &kp M         &kp COMMA        &kp DOT           &kp SLASH
-                           &lt 1 ESC    &lt 1 SPACE   &none  &none  &lt 2 SPACE   &lt 2 BACKSPACE
+  &kp Q            &kp W            &kp E                &kp R              &kp T        &kp Y  &kp U              &kp I                &kp O             &kp P
+  &hml LEFT_GUI A  &hml LEFT_ALT S  &hml LEFT_CONTROL D  &hml LEFT_SHIFT F  &kp G        &kp H  &hmr LEFT_SHIFT J  &hmr LEFT_CONTROL K  &hmr RIGHT_ALT L  &hmr LEFT_GUI SQT
+  &kp Z            &kp X            &kp C                &kp V              &kp B        &kp N  &kp M              &kp COMMA            &kp DOT           &kp SLASH
+                                    &lt 1 ESC            &lt 1 SPACE        &lt 1 TAB    &none  &lt 2 SPACE        &lt 2 BACKSPACE
             >;
         };
 
         Sym {
             label = "Sym";
             bindings = <
-&kp EXCL   &kp AT     &kp HASH  &kp SEMI   &kp LBRC  &kp EQUAL  &kp N7   &kp N8  &kp N9  &kp N0
-&kp LSHFT  &kp GRAVE  &trans    &kp COLON  &kp LBKT  &kp MINUS  &kp N4   &kp N5  &kp N6  &trans
-&kp RBRC   &kp RBKT   &kp RPAR  &kp TILDE  &kp LPAR  &kp BSLH   &kp N1   &kp N2  &kp N3  &trans
-                      &trans    &kp ENTER  &trans    &trans     &kp TAB  &trans
+  &kp EXCL   &kp AT     &kp HASH  &kp SEMI   &kp LBRC    &kp EQUAL  &kp N7   &kp N8  &kp N9  &kp N0
+  &kp LSHFT  &kp GRAVE  &trans    &kp COLON  &kp LBKT    &kp MINUS  &kp N4   &kp N5  &kp N6  &trans
+  &kp RBRC   &kp RBKT   &kp RPAR  &kp TILDE  &kp LPAR    &kp BSLH   &kp N1   &kp N2  &kp N3  &trans
+                        &trans    &kp ENTER  &trans      &trans     &kp TAB  &trans
             >;
         };
 
         Nav {
             label = "Nav";
             bindings = <
-&kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT  &kp CARET       &kp AMPS        &kp STAR      &kp DEL          &trans
-&trans    &trans  &trans    &trans      &trans       &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans
-&trans    &trans  &trans    &trans      &trans       &trans          &trans          &trans        &trans           &trans
-                  &trans    &kp ENTER   &trans       &trans          &kp TAB         &trans
+  &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT    &kp CARET       &kp AMPS        &kp STAR      &kp DEL          &trans
+  &trans    &trans  &trans    &trans      &trans         &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &trans
+  &trans    &trans  &trans    &trans      &trans         &trans          &trans          &trans        &trans           &trans
+                    &trans    &kp ENTER   &trans         &trans          &kp TAB         &trans
             >;
         };
 
         Tune {
             label = "Tune";
             bindings = <
-&bt BT_CLR   &none  &none  &none  &bt BT_SEL 0  &kp C_VOLUME_UP  &snip       &none     &none       &none
-&bootloader  &none  &none  &none  &bt BT_SEL 1  &kp K_MUTE       &kp K_PREV  &kp K_PP  &kp K_NEXT  &bootloader
-&none        &none  &none  &none  &bt BT_SEL 2  &kp C_VOL_DN     &none       &none     &none       &none
-                    &none  &none  &none         &none            &none       &none
+  &bt BT_CLR   &none  &none  &none  &bt BT_SEL 0    &kp C_VOLUME_UP  &snip       &none     &none       &none
+  &bootloader  &none  &none  &none  &bt BT_SEL 1    &kp K_MUTE       &kp K_PREV  &kp K_PP  &kp K_NEXT  &bootloader
+  &none        &none  &none  &none  &bt BT_SEL 2    &kp C_VOL_DN     &none       &none     &none       &none
+                      &none  &none  &none           &none            &none       &none
             >;
         };
     };
